@@ -1,38 +1,64 @@
+/*Base*/
 .App {
-  text-align: center;
+  text-align: left;
+  min-height: 100vh;
+  position: relative;
+  font-size: 18px;
+  margin: 5vh 0;
+  box-sizing: border-box;
 }
 
+.sectionSize {
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1200px;
+}
+
+@media (min-width: 600px) {
+  .sectionSize {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .sectionSize {
+    width: 70vw;
+  }
+}
+
+.uiSection{
+  margin: 5vh 0;
+}
+/*Navigation*/
+.nav{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/*Icons*/
 .App-logo {
-  height: 40vmin;
+  height: 6vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon{
+  cursor: pointer;
+}
+.icon-xs{
+  height: 4vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
+/*Links*/
 .App-link {
-  color: #61dafb;
+  color: rgb(164, 69, 237);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+input{
+  padding: 18px;
+  border-radius: 6px;
+  background-color: rgb(239, 239, 239);
+  border: none;
+  width: calc(100% - 36px);
 }
