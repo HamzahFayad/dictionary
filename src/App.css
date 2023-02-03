@@ -1,4 +1,11 @@
 /*Base*/
+:root{
+  --color: rgb(164, 69, 237);
+  --light: #fff;
+  --gray: rgb(239, 239, 239);
+  --borderRadius: 6px;
+  --bold: 800;
+}
 .App {
   text-align: left;
   min-height: 100vh;
@@ -29,6 +36,33 @@
 .uiSection{
   margin: 5vh 0;
 }
+.searchBar{
+  display: flex;
+}
+.searchBar button{
+  border: none;
+  background-color: var(--color);
+  font-weight: var(--bold);
+  flex: 0.15;
+  color: var(--light);
+  border-top-right-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.searchBar button:hover {
+  background-color: var(--gray);
+  color: var(--color);
+}
+
+.searchBar input {
+  flex: 1;
+  padding: 15px;
+  border-radius: var(--borderRadius);
+  background-color: var(--gray);
+  border: none;
+  width: calc(100% - 36px);
+}
 /*Navigation*/
 .nav{
   display: flex;
@@ -54,11 +88,3 @@
   color: rgb(164, 69, 237);
 }
 
-
-input{
-  padding: 18px;
-  border-radius: 6px;
-  background-color: rgb(239, 239, 239);
-  border: none;
-  width: calc(100% - 36px);
-}
